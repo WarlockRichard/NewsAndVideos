@@ -22,7 +22,7 @@ class VideoFactory extends AbstractFactory
 		}
 		return self::$instance;
 	}
-	function Get($id){
+	function Find($id){
 		$dbVideo = DBGateway::Get("video", $id);
 		if ($dbVideo != NULL){
 			$video = new Video($dbVideo[0], $dbVideo[1], $dbVideo[2], $dbVideo[3], $dbVideo[4]);
@@ -32,7 +32,7 @@ class VideoFactory extends AbstractFactory
 			return (FALSE);
 		}
 	}
-	function GetAll(){
+	function FindAll(){
 		$dbVideos = DBGateway::GetMultiple("video");
 		if ($dbVideos != NULL){
 			$allVideos = array();
@@ -44,7 +44,7 @@ class VideoFactory extends AbstractFactory
 			return (FALSE);
 		}
 	}
-	function GetMultiple($quantity){
+	function FindMultiple($quantity){
 		$dbVideos = DBGateway::GetMultiple("video", $quantity);
 		if ($dbVideos != NULL){
 			$multVideos = array();

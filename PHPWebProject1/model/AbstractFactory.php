@@ -12,7 +12,7 @@ require_once($_SERVER[DOCUMENT_ROOT]."/model/Model.php");
 abstract class AbstractFactory
 {
 	abstract public static function getInstance();
-	abstract function Get($id);
-	abstract function GetAll();
-	abstract function GetMultiple($quantity);
+	abstract function Find($id);
+	abstract function FindAll();
+	abstract function FindMultiple($quantity);
 }

@@ -22,7 +22,7 @@ class NewsFactory extends AbstractFactory
 		}
 		return self::$instance;
 	}
-	function Get($id){
+	function Find($id){
 		$dbNews = DBGateway::Get("news", $id);
 		if ($dbNews != NULL){
 			$news = new News($dbNews[0], $dbNews[1], $dbNews[2], $dbNews[3]);
@@ -32,7 +32,7 @@ class NewsFactory extends AbstractFactory
 			return (FALSE);
 		}
 	}
-	function GetAll(){
+	function FindAll(){
 		$dbNews = DBGateway::GetMultiple("news");
 		if ($dbNews != NULL){
 			$allNews = array();
@@ -44,7 +44,7 @@ class NewsFactory extends AbstractFactory
 			return (FALSE);
 		}
 	}
-	function GetMultiple($quantity){
+	function FindMultiple($quantity){
 		$dbNews = DBGateway::GetMultiple("news", $quantity);
 		if ($dbNews != NULL){
 			$multNews = array();

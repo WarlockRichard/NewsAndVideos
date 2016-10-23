@@ -27,9 +27,9 @@ class HomeController extends AbstractController
 	}
 	public function View(){
 		$newsFactory = NewsFactory::getInstance();
-        $news = $newsFactory->GetMultiple(3);
+        $news = $newsFactory->FindMultiple(3);
 		$videoFactory = VideoFactory::getInstance();
-        $videos = $videoFactory->GetMultiple(3);
+        $videos = $videoFactory->FindMultiple(3);
         include($_SERVER[DOCUMENT_ROOT]."/view/home.php");
 	}
 }
