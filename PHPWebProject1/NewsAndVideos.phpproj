@@ -10,6 +10,8 @@
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
     <AssemblyName>PHPWebProject1</AssemblyName>
     <ProjectHome />
+    <SpecificPageValue>cfg/</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -18,13 +20,13 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="cfg\Core.php" />
     <Compile Include="controller\AbstractController.php" />
     <Compile Include="controller\HomeController.php" />
     <Compile Include="controller\NewsController.php" />
     <Compile Include="controller\VideosController.php" />
     <Compile Include="index.php" />
     <Compile Include="model\AbstractFactory.php" />
+    <Compile Include="model\DBGateway.php" />
     <Compile Include="model\Model.php" />
     <Compile Include="model\News.php" />
     <Compile Include="model\NewsFactory.php" />
@@ -39,9 +41,30 @@
     <Compile Include="view\videos_id.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="cfg\" />
     <Folder Include="controller\" />
+    <Folder Include="css\" />
+    <Folder Include="fonts\" />
+    <Folder Include="js\" />
     <Folder Include="model\" />
     <Folder Include="view\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="view\padding.css" />
   </ItemGroup>
 </Project>

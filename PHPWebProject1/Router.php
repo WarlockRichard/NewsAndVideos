@@ -28,15 +28,13 @@ class Router //static class
                         $controller = NewsController::getInstance();
                         break;
                     default:
-                        /*include($_SERVER[DOCUMENT_ROOT]."/view/404.php");
-                        return;*/
-                        $controller = HomeController::getInstance();
+                        include($_SERVER[DOCUMENT_ROOT]."/view/404.php");
+                        return;
                 }
             }
             else{
-                /*include($_SERVER[DOCUMENT_ROOT]."/view/404.php");
-                return;*/
-                $controller = HomeController::getInstance();
+                include($_SERVER[DOCUMENT_ROOT]."/view/404.php");
+                return;
             }
         }
         if(array_key_exists(2 ,$request)){
