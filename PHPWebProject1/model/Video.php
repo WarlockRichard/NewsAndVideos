@@ -10,13 +10,6 @@
  */
 class Video extends Model
 {
-    function __construct($id, $title,$description, $path, $type){
-        $this->id=$id;
-	    $this->title=$title;
-	    $this->description=$description;
-	    $this->path=$path;
-	    $this->type=$type;
-    }
     public $id;
 	public $title;
     public $description;

@@ -25,7 +25,7 @@ class NewsFactory extends AbstractFactory
 	function Find($id){
 		$dbNews = DBGateway::Get("news", $id);
 		if ($dbNews != NULL){
-			$news = new News($dbNews[0], $dbNews[1], $dbNews[2], $dbNews[3]);
+			$news = new News(['id' => $dbNews[0], 'title' => $dbNews[1], 'preview' => $dbNews[2], 'text' => $dbNews[3]]);
 			return $news;
 		}
 		else{
@@ -37,7 +37,7 @@ class NewsFactory extends AbstractFactory
 		if ($dbNews != NULL){
 			$allNews = array();
 			foreach($dbNews as $news)
-				$allNews[] = new News($news[0], $news[1], $news[2], $news[3]);
+				$allNews[] = new News(['id' => $news[0], 'title' => $news[1], 'preview' => $news[2], 'text' => $news[3]]);
 			return $allNews;
 		}
 		else{
@@ -49,7 +49,7 @@ class NewsFactory extends AbstractFactory
 		if ($dbNews != NULL){
 			$multNews = array();
 			foreach($dbNews as $news)
-				$multNews[] = new News($news[0], $news[1], $news[2], $news[3]);
+				$multNews[] = new News(['id' => $news[0], 'title' => $news[1], 'preview' => $news[2], 'text' => $news[3]]);
 			return $multNews;
 		}
 		else{

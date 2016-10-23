@@ -10,5 +10,12 @@
  */
 abstract class Model
 {
+    function __construct($data = false){
+        if($data){
+            foreach($data as $key => $value){
+                $this->$key = $value;
+            }
+        }
+    }
 	public $id;
 }
