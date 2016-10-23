@@ -19,11 +19,11 @@ abstract class AbstractController
     var $template404;
 	public function View($id=""){
         if($id == ""){
-            $model = $this->abstractFactory->GetAll();
+            $model = $this->abstractFactory->FindAll();
             include($this->templateMultiple);
         }
         elseif ((int)$id >0){
-            $model = $this->abstractFactory->Get($id);
+            $model = $this->abstractFactory->Find($id);
             include($this->templateSingle);
         }
         else{
