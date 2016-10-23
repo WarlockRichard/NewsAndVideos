@@ -9,7 +9,6 @@
 
 	  DBGateway::connect();
 
-	  // Обработка запроса
 	  $request = !empty($_SERVER['REQUEST_URI'])
 			? trim($_SERVER['REQUEST_URI'])
 			: "";
