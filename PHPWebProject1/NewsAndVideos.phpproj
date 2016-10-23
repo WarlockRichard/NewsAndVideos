@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>NewsAndVideos</Name>
+    <ProjectGuid>a54479e3-b8af-4439-bac8-da2a55f976fc</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>PHPWebProject1</AssemblyName>
+    <ProjectHome />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cfg\Core.php" />
+    <Compile Include="controller\AbstractController.php" />
+    <Compile Include="controller\HomeController.php" />
+    <Compile Include="controller\NewsController.php" />
+    <Compile Include="controller\VideosController.php" />
+    <Compile Include="index.php" />
+    <Compile Include="model\AbstractFactory.php" />
+    <Compile Include="model\Model.php" />
+    <Compile Include="model\News.php" />
+    <Compile Include="model\NewsFactory.php" />
+    <Compile Include="model\Video.php" />
+    <Compile Include="model\VideoFactory.php" />
+    <Compile Include="Router.php" />
+    <Compile Include="view\404.php" />
+    <Compile Include="view\home.php" />
+    <Compile Include="view\news.php" />
+    <Compile Include="view\news_id.php" />
+    <Compile Include="view\videos.php" />
+    <Compile Include="view\videos_id.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cfg\" />
+    <Folder Include="controller\" />
+    <Folder Include="model\" />
+    <Folder Include="view\" />
+  </ItemGroup>
+</Project>
